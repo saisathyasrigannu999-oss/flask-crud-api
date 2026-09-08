@@ -2,11 +2,15 @@
 
 
 
-A simple and scalable CRUD (Create, Read, Update, Delete) REST API built using Python Flask, Flask-SQLAlchemy, PostgreSQL, and Docker.
+A simple CRUD (Create, Read, Update, Delete) REST API built using \*\*Python Flask, Flask-SQLAlchemy, PostgreSQL, and Docker\*\*.
 
 
 
-This project demonstrates how to build a backend REST API, connect it to a PostgreSQL database, containerize the application using Docker, and test the API using Postman.
+This project demonstrates how to develop a backend REST API, connect it to a PostgreSQL database, containerize the application using Docker, and test the API using Postman.
+
+
+
+\---
 
 
 
@@ -18,7 +22,27 @@ The Flask CRUD REST API allows users to perform basic database operations throug
 
 
 
-The application uses Flask as the backend framework, SQLAlchemy as the ORM, PostgreSQL as the database, and Docker for containerization.
+The application uses:
+
+
+
+\* \*\*Flask\*\* for the backend REST API
+
+\* \*\*Flask-SQLAlchemy\*\* for database operations
+
+\* \*\*PostgreSQL\*\* as the relational database
+
+\* \*\*Docker\*\* for containerization
+
+\* \*\*Docker Compose\*\* for managing Flask and PostgreSQL
+
+\* \*\*Postman\*\* for API testing
+
+\* \*\*Git \& GitHub\*\* for version control
+
+
+
+\---
 
 
 
@@ -26,23 +50,31 @@ The application uses Flask as the backend framework, SQLAlchemy as the ORM, Post
 
 
 
-\* Python
+| Technology       | Purpose                      |
 
-\* Flask
+| ---------------- | ---------------------------- |
 
-\* Flask-SQLAlchemy
+| Python           | Programming Language         |
 
-\* PostgreSQL
+| Flask            | Backend Web Framework        |
 
-\* Docker
+| Flask-SQLAlchemy | ORM / Database Integration   |
 
-\* Docker Compose
+| PostgreSQL       | Relational Database          |
 
-\* Postman
+| Docker           | Application Containerization |
 
-\* Git
+| Docker Compose   | Multi-container Management   |
 
-\* GitHub
+| Postman          | API Testing                  |
+
+| Git              | Version Control              |
+
+| GitHub           | Code Repository              |
+
+
+
+\---
 
 
 
@@ -66,9 +98,13 @@ The application uses Flask as the backend framework, SQLAlchemy as the ORM, Post
 
 \* Docker containerization
 
-\* Docker Compose for managing Flask and PostgreSQL
+\* Docker Compose configuration
 
 \* REST API testing using Postman
+
+
+
+\---
 
 
 
@@ -98,6 +134,10 @@ flask-crud-api/
 
 
 
+\---
+
+
+
 \## 🔄 CRUD Operations
 
 
@@ -118,11 +158,19 @@ flask-crud-api/
 
 
 
-\## 🌐 API Endpoints
+\---
 
 
 
-\### 1. Check API Status
+\# 🌐 API Endpoints \& Outputs
+
+
+
+\## 1. Check API Status
+
+
+
+\### Request
 
 
 
@@ -138,7 +186,7 @@ http://127.0.0.1:5000/
 
 
 
-Response:
+\### Output
 
 
 
@@ -154,7 +202,23 @@ Response:
 
 
 
-\### 2. Create User
+\### Result
+
+
+
+✅ Flask API is running successfully.
+
+
+
+\---
+
+
+
+\## 2. Create User
+
+
+
+\### Request
 
 
 
@@ -170,7 +234,7 @@ http://127.0.0.1:5000/users
 
 
 
-Request Body:
+\### Request Body
 
 
 
@@ -178,9 +242,9 @@ Request Body:
 
 {
 
-&#x20;   "name": "Sai",
+&#x20;   "name": "Sathya",
 
-&#x20;   "email": "sai@gmail.com"
+&#x20;   "email": "sathya@gmail.com"
 
 }
 
@@ -188,7 +252,7 @@ Request Body:
 
 
 
-Example Response:
+\### Output
 
 
 
@@ -196,9 +260,9 @@ Example Response:
 
 {
 
-&#x20;   "message": "User created successfully",
+&#x20;   "id": 3,
 
-&#x20;   "id": 2
+&#x20;   "message": "User created successfully"
 
 }
 
@@ -206,7 +270,23 @@ Example Response:
 
 
 
-\### 3. Get All Users
+\### Result
+
+
+
+✅ User created successfully.
+
+
+
+\---
+
+
+
+\## 3. Get All Users
+
+
+
+\### Request
 
 
 
@@ -222,7 +302,7 @@ http://127.0.0.1:5000/users
 
 
 
-Example Response:
+\### Output
 
 
 
@@ -246,7 +326,23 @@ Example Response:
 
 
 
-\### 4. Get User by ID
+\### Result
+
+
+
+✅ All users retrieved successfully.
+
+
+
+\---
+
+
+
+\## 4. Get User by ID
+
+
+
+\### Request
 
 
 
@@ -256,13 +352,49 @@ Example Response:
 
 ```text
 
-http://127.0.0.1:5000/users/2
+http://127.0.0.1:5000/users/3
 
 ```
 
 
 
-\### 5. Update User
+\### Output
+
+
+
+```json
+
+{
+
+&#x20;   "id": 3,
+
+&#x20;   "name": "Sathya",
+
+&#x20;   "email": "sathya@gmail.com"
+
+}
+
+```
+
+
+
+\### Result
+
+
+
+✅ Individual user retrieved successfully.
+
+
+
+\---
+
+
+
+\## 5. Update User
+
+
+
+\### Request
 
 
 
@@ -272,13 +404,13 @@ http://127.0.0.1:5000/users/2
 
 ```text
 
-http://127.0.0.1:5000/users/2
+http://127.0.0.1:5000/users/3
 
 ```
 
 
 
-Request Body:
+\### Request Body
 
 
 
@@ -286,9 +418,9 @@ Request Body:
 
 {
 
-&#x20;   "name": "Sai Sri",
+&#x20;   "name": "Sathya Sri",
 
-&#x20;   "email": "saisri@gmail.com"
+&#x20;   "email": "sathyasri@gmail.com"
 
 }
 
@@ -296,7 +428,7 @@ Request Body:
 
 
 
-Example Response:
+\### Output
 
 
 
@@ -312,7 +444,23 @@ Example Response:
 
 
 
-\### 6. Delete User
+\### Result
+
+
+
+✅ User updated successfully.
+
+
+
+\---
+
+
+
+\## 6. Delete User
+
+
+
+\### Request
 
 
 
@@ -322,13 +470,13 @@ Example Response:
 
 ```text
 
-http://127.0.0.1:5000/users/2
+http://127.0.0.1:5000/users/3
 
 ```
 
 
 
-Example Response:
+\### Output
 
 
 
@@ -344,15 +492,55 @@ Example Response:
 
 
 
-\## 🐘 Database
+\### Result
 
 
 
-This project uses PostgreSQL as the relational database.
+✅ User deleted successfully.
 
 
 
-Database configuration:
+\---
+
+
+
+\# 🧪 CRUD Testing Summary
+
+
+
+The following CRUD operations were successfully tested using \*\*Postman\*\*:
+
+
+
+| Test           | Method | Result       |
+
+| -------------- | ------ | ------------ |
+
+| Create User    | POST   | ✅ Successful |
+
+| Get All Users  | GET    | ✅ Successful |
+
+| Get User by ID | GET    | ✅ Successful |
+
+| Update User    | PUT    | ✅ Successful |
+
+| Delete User    | DELETE | ✅ Successful |
+
+
+
+\---
+
+
+
+\# 🐘 PostgreSQL Database
+
+
+
+This project uses \*\*PostgreSQL\*\* as the database.
+
+
+
+\### Database Configuration
 
 
 
@@ -372,11 +560,57 @@ The PostgreSQL database runs inside a Docker container.
 
 
 
-\## 🐳 Docker Setup
+\### Database Table
 
 
 
-The project uses Docker Compose to run both the Flask application and PostgreSQL database.
+The application uses a `user` table containing:
+
+
+
+```text
+
+id
+
+name
+
+email
+
+```
+
+
+
+Example database record:
+
+
+
+```text
+
+id | name | email
+
+\---|------|----------------
+
+2  | Sai  | sai@gmail.com
+
+```
+
+
+
+\---
+
+
+
+\# 🐳 Docker Setup
+
+
+
+The project uses Docker Compose to run both:
+
+
+
+1\. Flask application
+
+2\. PostgreSQL database
 
 
 
@@ -392,25 +626,43 @@ docker compose up --build
 
 
 
-The API will be available at:
-
-
-
-```text
-
-http://127.0.0.1:5000/
-
-```
-
-
-
-\### Check Running Containers
+\### Check Containers
 
 
 
 ```bash
 
 docker compose ps
+
+```
+
+
+
+\### Successful Docker Output
+
+
+
+```text
+
+NAME                   SERVICE   STATUS
+
+flask-crud-api-db-1    db        Up (healthy)
+
+flask-crud-api-web-1   web       Up
+
+```
+
+
+
+\### Ports
+
+
+
+```text
+
+Flask       → 5000
+
+PostgreSQL  → 5432
 
 ```
 
@@ -440,35 +692,139 @@ docker compose up
 
 
 
-\## 🧪 API Testing
+\---
 
 
 
-The API was tested using Postman.
+\# 🏗️ Docker Architecture
 
 
 
-The following operations were successfully tested:
+```text
+
+&#x20;                Flask CRUD API
+
+&#x20;                      |
+
+&#x20;                      |
+
+&#x20;                Docker Compose
+
+&#x20;                  /        \\
+
+&#x20;                 /          \\
+
+&#x20;            Flask Web     PostgreSQL
+
+&#x20;            Container      Container
+
+&#x20;               |               |
+
+&#x20;            Port 5000       Port 5432
+
+&#x20;               |
+
+&#x20;            REST API
+
+&#x20;               |
+
+&#x20;            Postman
+
+```
 
 
 
-\* POST - Create User
-
-\* GET - Retrieve Users
-
-\* GET by ID - Retrieve Individual User
-
-\* PUT - Update User
-
-\* DELETE - Delete User
+\---
 
 
 
-\## 📦 Installation Without Docker
+\# 📦 Installation
 
 
 
-If you want to run the Flask application locally, install the required Python packages:
+\## Prerequisites
+
+
+
+Install the following:
+
+
+
+\* Python
+
+\* Docker Desktop
+
+\* Git
+
+\* Postman
+
+
+
+\---
+
+
+
+\## Run Using Docker
+
+
+
+Clone the repository:
+
+
+
+```bash
+
+git clone https://github.com/saisathyasrigannu999-oss/flask-crud-api.git
+
+```
+
+
+
+Go to the project directory:
+
+
+
+```bash
+
+cd flask-crud-api
+
+```
+
+
+
+Build and start the containers:
+
+
+
+```bash
+
+docker compose up --build
+
+```
+
+
+
+Open the API:
+
+
+
+```text
+
+http://127.0.0.1:5000/
+
+```
+
+
+
+\---
+
+
+
+\# 💻 Run Without Docker
+
+
+
+Install the required Python packages:
 
 
 
@@ -480,7 +836,7 @@ pip install -r requirements.txt
 
 
 
-Then run:
+Run the Flask application:
 
 
 
@@ -492,15 +848,19 @@ python app.py
 
 
 
-However, Docker Compose is recommended because it automatically manages the Flask application and PostgreSQL database.
+However, Docker Compose is recommended because it manages both the Flask application and PostgreSQL database.
 
 
 
-\## 🔐 Environment and Configuration
+\---
 
 
 
-The application uses PostgreSQL with the following connection:
+\# 🔐 Database Connection
+
+
+
+The Flask application connects to PostgreSQL using:
 
 
 
@@ -512,11 +872,71 @@ postgresql://postgres:postgres@db:5432/flaskdb
 
 
 
-The hostname `db` refers to the PostgreSQL service defined in `docker-compose.yml`.
+Here:
 
 
 
-\## 📌 Learning Outcomes
+```text
+
+postgres   → PostgreSQL username
+
+postgres   → PostgreSQL password
+
+db         → Docker PostgreSQL service name
+
+5432       → PostgreSQL port
+
+flaskdb    → Database name
+
+```
+
+
+
+\---
+
+
+
+\# 📡 REST API Flow
+
+
+
+```text
+
+Client / Postman
+
+&#x20;      |
+
+&#x20;      ↓
+
+&#x20;  Flask API
+
+&#x20;      |
+
+&#x20;      ↓
+
+SQLAlchemy ORM
+
+&#x20;      |
+
+&#x20;      ↓
+
+&#x20;PostgreSQL
+
+&#x20;      |
+
+&#x20;      ↓
+
+&#x20;  Database
+
+```
+
+
+
+\---
+
+
+
+\# 📚 Learning Outcomes
 
 
 
@@ -524,27 +944,63 @@ Through this project, I learned:
 
 
 
-\* Building REST APIs using Flask
+\* How to build REST APIs using Flask
 
-\* Implementing CRUD operations
+\* How CRUD operations work
 
-\* Working with Flask-SQLAlchemy
+\* How to use Flask-SQLAlchemy
 
-\* Connecting Flask with PostgreSQL
+\* How to connect Flask with PostgreSQL
 
-\* Using SQLAlchemy ORM
+\* How SQLAlchemy ORM works
 
-\* Containerizing applications using Docker
+\* How to containerize an application using Docker
 
-\* Managing multiple services using Docker Compose
+\* How to manage multiple services using Docker Compose
 
-\* Testing REST APIs using Postman
+\* How to test REST APIs using Postman
 
-\* Using Git and GitHub for version control
+\* How to use Git for version control
+
+\* How to upload and manage projects using GitHub
 
 
 
-\## 👩‍💻 Author
+\---
+
+
+
+\# 🎯 Project Highlights
+
+
+
+\* ✅ RESTful API architecture
+
+\* ✅ Complete CRUD functionality
+
+\* ✅ PostgreSQL database integration
+
+\* ✅ SQLAlchemy ORM
+
+\* ✅ Dockerized Flask application
+
+\* ✅ Docker Compose
+
+\* ✅ Postman API testing
+
+\* ✅ Git version control
+
+\* ✅ GitHub repository
+
+\* ✅ Professional project documentation
+
+
+
+\---
+
+
+
+\# 👩‍💻 Author
 
 
 
@@ -552,27 +1008,35 @@ Through this project, I learned:
 
 
 
-B.Tech – Computer Science Engineering (Data Science)
+\*\*B.Tech – Computer Science Engineering (Data Science)\*\*
 
 
 
-\## ⭐ Project Highlights
+\---
 
 
 
-\* RESTful API architecture
+\## 🔗 GitHub Repository
 
-\* PostgreSQL database integration
 
-\* SQLAlchemy ORM
 
-\* Dockerized application
+\[Flask CRUD REST API](https://github.com/saisathyasrigannu999-oss/flask-crud-api)
 
-\* CRUD functionality
 
-\* Postman API testing
 
-\* GitHub version control
+\---
+
+
+
+\## ⭐ Conclusion
+
+
+
+This project demonstrates the development of a complete backend CRUD REST API using Flask and PostgreSQL, with Docker-based deployment and Postman-based API testing.
+
+
+
+It provides practical experience in backend development, database integration, API development, containerization, testing, and version control.
 
 
 
