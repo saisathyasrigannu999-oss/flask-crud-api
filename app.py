@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ class User(db.Model):
 
 @app.route("/")
 def home():
-    return jsonify({"message": "Flask CRUD API is running"})
+    return render_template("index.html")
 
 
 @app.route("/users", methods=["POST"])
