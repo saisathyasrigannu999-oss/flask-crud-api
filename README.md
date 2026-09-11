@@ -1034,6 +1034,9 @@ Through this project, I learned:
 
 This project demonstrates the development of a complete backend CRUD REST API using Flask and PostgreSQL, with Docker-based deployment and Postman-based API testing.
 
+Output:
+<img width="1917" height="851" alt="Image" src="https://github.com/user-attachments/assets/f7fbb6fd-356c-457f-948d-a0841260e9fb" />
+
 
 
 It provides practical experience in backend development, database integration, API development, containerization, testing, and version control.
